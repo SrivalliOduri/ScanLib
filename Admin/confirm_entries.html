@@ -73,22 +73,35 @@ button{
 <td>Book Issue</td>
 <td>10:30 AM</td>
 <td>
-<button class="approve">Approve</button>
-<button class="reject">Reject</button>
+<button class="approve"onclick="approve(this)">Approve</button>
+<button class="reject"onclick="reject(this)">Reject</button>
 </td>
 </tr>
 
 <tr>
-<td>Rasheda</td>
+<td>Johnson</td>
 <td>Study</td>
 <td>11:00 AM</td>
 <td>
-<button class="approve">Approve</button>
-<button class="reject">Reject</button>
+<button class="approve"onclick="approve(this)">Approve</button>
+<button class="reject"onclick="reject(this)">Reject</button>
 </td>
 </tr>
 
 </table>
+<script>
+function approve(btn){
+    const row = btn.closest("tr");
+    row.style.backgroundColor = "#d4edda";
+    alert("Entry Approved");
+}
+
+function reject(btn){
+    const row = btn.closest("tr");
+    row.style.backgroundColor = "#f8d7da";
+    alert("Entry Rejected");
+}
+</script>
 
 </body>
 </html>
