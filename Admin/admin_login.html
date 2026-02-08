@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ScanLib Admin Login</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#2b5876,#4e4376);
+    font-family:Poppins,sans-serif;
+}
+
+.login-box{
+    background:white;
+    width:360px;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+    animation:pop .5s ease;
+}
+
+@keyframes pop{
+    from{transform:scale(.8);opacity:0}
+    to{transform:scale(1);opacity:1}
+}
+
+.logo{
+    font-size:50px;
+}
+
+h2{
+    margin:10px 0 5px;
+    color:#2b5876;
+}
+
+p{
+    margin-bottom:25px;
+    color:gray;
+}
+
+.input-box{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-box input{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    outline:none;
+}
+
+.input-box span{
+    position:absolute;
+    left:12px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#999;
+    pointer-events:none;
+    transition:.3s;
+    background:white;
+    padding:0 5px;
+}
+
+.input-box input:focus + span,
+.input-box input:valid + span{
+    top:-6px;
+    font-size:12px;
+    color:#2b5876;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(to right,#2b5876,#4e4376);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+<div class="logo">📚</div>
+<h2>ScanLib Admin</h2>
+<p>Smart Library Access System</p>
+
+<div class="input-box">
+<input type="email" required>
+<span>Admin Email</span>
+</div>
+
+<div class="input-box">
+<input type="password" required>
+<span>Password</span>
+</div>
+
+<button>Login</button>
+
+</div>
+
+</body>
+</html>
