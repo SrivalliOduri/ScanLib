@@ -4,6 +4,11 @@
 <title>ScanLib Admin Dashboard</title>
 
 <style>
+    .links a.active {
+  font-weight: bold;
+  color: #2b5876;
+  text-decoration: underline;
+}
 body{
     margin:0;
     font-family:Poppins,Arial;
@@ -63,17 +68,28 @@ a{
 <div class="header">📚 ScanLib Admin Dashboard</div>
 
 <div class="cards">
-<div class="card"><h3>Students Today</h3><p>18</p></div>
-<div class="card"><h3>Pending Confirmations</h3><p>4</p></div>
-<div class="card"><h3>Books Issued</h3><p>9</p></div>
-<div class="card"><h3>False Entries</h3><p>1</p></div>
+<div class="card"><h3>Students Today</h3><p id="studentsToday">18</p></div>
+<div class="card"><h3>Pending Confirmations</h3><p id="pendingConfirmations">4</p></div>
+<div class="card"><h3>Books Issued</h3><p id="booksIssued">9</p></div>
+<div class="card"><h3>False Entries</h3><p id="falseEntries">1</p></div>
 </div>
-
-<div class="links">
-<a href="confirm_entries.html">Confirm Entries</a>
-<a href="announcements.html">Announcements</a>
-<a href="admin_login.html">Logout</a>
+<p style="text-align:center;color:gray;font-size:13px;">*Counts are currently simulated for demo purposes</p>
+<div class="links"></div>
+    <a href="dashboard.html"class="active">Dashboard</a>
+    <a href="confirm_entries.html">Confirm Entries</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="reminder.html">15-Day Reminder</a>
+    <a href="admin_login.html">Logout</a>
 </div>
+<script>
+    // Simulate fetching today's student count
+    let studentsTodayCount = 20; 
+    document.getElementById("studentsToday").innerText = studentsTodayCount;
+    document.getElementById("pendingConfirmations").innerText = 5;
+    let issuedBooks = 10;
+    document.getElementById("booksIssued").innerText = issuedBooks;
+    document.getElementById("falseEntries").innerText = 2;
+</script>
 
 </body>
 </html>
